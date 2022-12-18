@@ -2,6 +2,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}             % Default unicode
 \usepackage[none]{hyphenat}             % Disables wordbreak
+%\usepackage{multicol}                   % multiple columns
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{geometry}
@@ -18,11 +19,16 @@
 \pagestyle{empty}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% IMAGES & GRAPHICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{graphicx}
+%\usepackage{graphicx}                      % images
 %\graphicspath{ {./image/} }
 
+%\usepackage{pifont}    %\ding{118}         % symbols
+
+%\usepackage{tikz}                           % graphics
+%\usetikzlibrary{shapes.geometric, arrows}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MATH SYNTAX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{amsmath}
+%\usepackage{amsmath, amssymb}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PROGRAMMING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{listings,xcolor}
@@ -31,7 +37,7 @@
 %\definecolor{gray}{rgb}{0.5,0.5,0.5}
 %\definecolor{mauve}{rgb}{0.58,0,0.82}
 %
-%\lstset{
+%\lstdefinestyle{Java}{
 %    language=Java,
 %    showstringspaces=false,
 %    columns=flexible,
@@ -49,8 +55,15 @@
 %    breaklines=true,
 %    breakatwhitespace=false,
 %    tabsize=2
+%    xleftmargin=\parindent
+%    number=none
 %}
 
+%%%%%%%%%%%%%%%%%%%%%%%%% TABLE OF CONTENTS SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{titletoc, tocloft}
+%\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}  % for parts
+%\renewcommand\thepart{\arabic{part}}                    % number system
+%\setlength{\cftsecindent}{1cm}                          % indent section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -67,9 +80,23 @@
 %    \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABLE OF CONTENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%\vspace*{\fill}
+%\begingroup
+%\centering
+%
+%\addcontentsline{toc}{part}{Contents}
+%\tableofcontents
+%
+%\endgroup
+%\vspace*{\fill}
+%
+%\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\part{Part}
+\section{Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
 Sample Text
 
 
