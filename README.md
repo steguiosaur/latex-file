@@ -16,8 +16,8 @@ Create latex configuration in command line.
 
 > If `textconfig-installer` is not executable.
 
-    ```sh
-    chmod +x textconfig-installer && ./texconfig-installer
-    ```
+```sh
+chmod +x textconfig-installer && ./texconfig-installer
+```
 
 Use the command `texconf <filename.tex>` to generate the file.
