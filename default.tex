@@ -2,7 +2,11 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}             % Default unicode
 \usepackage[none]{hyphenat}             % Disables wordbreak
-%\usepackage{multicol}                   % multiple columns
+%\usepackage{multicol}                  % multiple columns
+
+%\usepackage{libertine}                 % font
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{changepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{geometry}
@@ -18,14 +22,26 @@
 %\usepackage{fancyhdr}
 \pagestyle{empty}
 
+%\usepackage[explicit]{titlesec}
+%\newcommand{\raisedrulefill}[2][0ex]{\leaders\hbox{\rule[#1]{0.1pt}{#2}}\hfill}
+%\titleformat{\subsection}{\Large\bfseries}{\thesubsection. }{0em}{#1\,\raisedrulefill[0ex]{1pt}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% IMAGES & GRAPHICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{graphicx}                      % images
 %\graphicspath{ {./image/} }
+
+%\usepackage{fontawesome}     %\faicon      % icons
 
 %\usepackage{pifont}    %\ding{118}         % symbols
 
 %\usepackage{tikz}                           % graphics
 %\usetikzlibrary{shapes.geometric, arrows}
+
+% Create normal bullet point using $\bigcdot$
+%\makeatletter
+%\newcommand*\bigcdot{\mathpalette\bigcdot@{.7}}
+%\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+%\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MATH SYNTAX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{amsmath, amssymb}
@@ -105,3 +121,23 @@ Sample Text
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GUIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% IMAGE
+%\includegraphics[width=\textwidth,height=4.5in]{image.png}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PROGRAMMING
+%\begin{listings}[style=Java]
+%    ... code
+%\end{listings}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABLE
+%\begin{tabular}{c c c}
+%    text & text & text
+%\end{tabular}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MINIPAGE
+%\begin{minipage}[t]{50pt}
+%    \flushleft
+%\end{minipage}
