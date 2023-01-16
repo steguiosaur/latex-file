@@ -1,0 +1,6 @@
+#!/bin/sh
+mkdir -p ~/.config/texconf
+cp ./default.tex ~/.config/texconf/default.tex
+echo "alias texconf='cp ~/.config/texconf/default.tex'" >> ~/.bashrc
+echo "alias texconf='cp ~/.config/texconf/default.tex'" >> ~/.zshrc
+echo "alias texconf='cp ~/.config/texconf/default.tex'" >> ~/.config/fish/config.fish
