@@ -25,3 +25,13 @@ Create latex configuration in command line.
 ## Usage
 
 Input the command `texconf <filename.tex>` to generate the file.
+
+```sh
+texconf "filename.tex"
+```
+
+To update the configuration file, run the command:
+
+```sh
+cp ./default.tex ~/.config/texconf/default.tex
+```
