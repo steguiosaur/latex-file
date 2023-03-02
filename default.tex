@@ -1,41 +1,56 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DEFAULT TEXT FILE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT SETTINGS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}             % Default unicode
-\usepackage[none]{hyphenat}             % Disables wordbreak
-%\usepackage{multicol}                  % multiple columns
+\usepackage{geometry}                   % paper controls
+%\usepackage{fancyhdr}                  % add header and footer 
+%\usepackage{multicol}                  % add multiple columns
+%\usepackage{libertine}                 % font changes
+%\usepackage{changepage}                % page layout changes
 
-%\usepackage{libertine}                 % font
+% Disables word break
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% Font change (requires <font> package)
 %\renewcommand{\familydefault}{\sfdefault}
-%\usepackage{changepage}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{geometry}
+% Page adjustment (requires geometry package)
 \geometry{
+    margin=0.5in
 %    a4paper,
 %    total={170mm,257mm},
 %    left=20mm,
 %    top=20mm,
 %    headheight=25pt
-    margin=0.5in
 }
 
-%\usepackage{fancyhdr}
-\pagestyle{empty}
+% Header and footer adjustment (requires fancyhdr package)
+%\pagestyle{empty}
+%\pagestyle{fancy}                      % uncomment desired page style
+%\fancyhf{}
+%\fancyhead[L]{}
+%\fancyhead[R]{}
+%\fancyhead[C]{}
+%\fancyfoot[L]{}
+%\fancyfoot[R]{}
+%\fancyfoot[C]{}
 
-%\usepackage[explicit]{titlesec}
-%\newcommand{\raisedrulefill}[2][0ex]{\leaders\hbox{\rule[#1]{0.1pt}{#2}}\hfill}
-%\titleformat{\subsection}{\Large\bfseries}{\thesubsection. }{0em}{#1\,\raisedrulefill[0ex]{1pt}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% IMAGES & GRAPHICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{graphicx}                      % images
-%\graphicspath{ {./image/} }
+% COLORS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+\usepackage{xcolor}                     % RGB set colors (command: \color{<color>})
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
 
-%\usepackage{fontawesome}     %\faicon      % icons
 
-%\usepackage{pifont}    %\ding{118}         % symbols
-
-%\usepackage{tikz}                           % graphics
-%\usetikzlibrary{shapes.geometric, arrows}
+% IMAGES AND GRAPHICS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%\usepackage{graphicx}                  % adding images
+%\usepackage{fontawesome}               % icons (command: \faicon) 
+%\usepackage{pifont}                    % add other symbols (command: \ding{118})
+%\usepackage{tikz}                      % graphics
 
 % Create normal bullet point using $\bigcdot$
 %\makeatletter
@@ -43,16 +58,23 @@
 %\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 %\makeatother
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MATH SYNTAX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{amsmath, amssymb}
+% Image path set (requires graphicx package)
+%\graphicspath{ {./image/} }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PROGRAMMING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{listings,xcolor}
-%\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
-%\definecolor{dkgreen}{rgb}{0,0.6,0}
-%\definecolor{gray}{rgb}{0.5,0.5,0.5}
-%\definecolor{mauve}{rgb}{0.58,0,0.82}
-%
+% Generate graphics using tikz
+%\usetikzlibrary{shapes.geometric, arrows}
+
+
+% MATH SYNTAX -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%\usepackage{amsmath)                   % LaTeX math syntax
+%\usepackage(amssymb}                   % LaTeX math symbols
+%\usepackage{amsfonts}                  % LaTeX math fonts
+%\usepackage{amsthm}                    % LaTeX math theme
+
+
+% PROGRAMMING -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%\usepackage{listings}                  % set code display configuration 
+
 %\lstdefinestyle{Java}{
 %    language=Java,
 %    showstringspaces=false,
@@ -75,16 +97,18 @@
 %    number=none
 %}
 
-%%%%%%%%%%%%%%%%%%%%%%%%% TABLE OF CONTENTS SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{titletoc, tocloft}
+% TABLE OF CONTENTS SETTINGS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+%\usepackage{titletoc, tocloft}         % table of contents changes
+
 %\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}  % for parts
 %\renewcommand\thepart{\arabic{part}}                    % number system
 %\setlength{\cftsecindent}{1cm}                          % indent section
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %    \maketitle
 
 %    \begin{center}
@@ -93,9 +117,9 @@
 %    \end{center}
 %    \noindent{ Name } \hfill{} \hfill{ Class }
 %
-%    \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+%    \noindent\hrulefill
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABLE OF CONTENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TOC -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %\vspace*{\fill}
 %\begingroup
 %\centering
@@ -107,37 +131,39 @@
 %\vspace*{\fill}
 %
 %\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CONTENT -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \part{Part}
 \section{Section}
 \subsection{Subsection}
-\subsubsection{Subsubsection}
-Sample Text
+
+Sample text here.
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GUIDE -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GUIDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% IMAGE
+% IMAGE
 %\includegraphics[width=\textwidth,height=4.5in]{image.png}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PROGRAMMING
+
+% PROGRAMMING
 %\begin{listings}[style=Java]
 %    ... code
 %\end{listings}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABLE
+
+% TABLE
 %\begin{tabular}{c c c}
 %    text & text & text
 %\end{tabular}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MINIPAGE
+
+% MINIPAGE
 %\begin{minipage}[t]{50pt}
 %    \flushleft
 %\end{minipage}
+
+% END -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\end{document}
+% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

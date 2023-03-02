@@ -2,6 +2,8 @@
 
 Create latex configuration in command line.
 
+## Setup
+
 1. Clone the repository to your machine and `cd` to directory.
 
     ```sh
@@ -14,10 +16,12 @@ Create latex configuration in command line.
     ./texconfig-installer
     ```
 
-> If `textconfig-installer` is not executable.
+    > If `textconfig-installer` is not executable.
 
-```sh
-chmod +x textconfig-installer && ./texconfig-installer
-```
+    ```sh
+    chmod +x textconfig-installer && ./texconfig-installer
+    ```
 
-Use the command `texconf <filename.tex>` to generate the file.
+## Usage
+
+Input the command `texconf <filename.tex>` to generate the file.
